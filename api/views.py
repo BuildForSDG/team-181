@@ -18,6 +18,7 @@ def get_farmers_info(request):
         farmers_info = FarmerDetails.objects.all()
         serializer = FamersInfoSerializers(farmers_info, many=True)
         return JsonResponse({'Info': serializer.data}, safe=False, status= status.HTTP_200_OK)
+        print("It is working")
 
 # Create products as an authenticated user.
 @api_view(['POST'])
