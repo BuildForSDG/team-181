@@ -21,7 +21,7 @@ def get_farmers_info(request):
 
 # Create products as an authenticated user.
 @api_view(['POST'])
-@permission_classes((IsAuthenticated, ))
+@permission_classes((AllowAny, ))
 def create_products(request):
     product = Products.objects.all()
     if request.method == 'POST':
